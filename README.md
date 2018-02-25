@@ -1,6 +1,6 @@
-# animator-js
+# animator
 
-An instance class which manages animations by hooking into the native window browser function - requestAnimationFrame (or setInterval if not available)
+An instance class which manages animations by hooking into requestAnimationFrame (or setInterval if not available).
 
 ## Usage
 

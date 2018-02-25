@@ -1,10 +1,9 @@
 {
-  "name": "animator-js",
+  "name": "@jworkshop/animator",
   "version": "0.0.1",
   "description":
     "An instance class which manages animations by hooking into requestAnimationFrame (or setInterval if not available).",
   "author": "jworkshop",
-  "private": true,
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-preset-env": "^1.6.0",
