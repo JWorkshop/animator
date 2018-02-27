@@ -23,6 +23,8 @@ An instance class which manages animations by hooking into requestAnimationFrame
 ## Usage
 
 ```javascript
+import Animator from "@jworkshop/animator";
+
 /* Create an instance of an animator. */
 let animator = new Animator();
 
