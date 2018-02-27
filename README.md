@@ -2,20 +2,21 @@
 
 An instance class which manages animations by hooking into requestAnimationFrame (or setInterval if not available).
 
+[![NPM](https://nodei.co/npm/@jworkshop/animator.png)](https://nodei.co/npm/@jworkshop/animator/)
+
 ## Usage
 
 ```javascript
 /* Create an instance of an animator. */
 let animator = new Animator();
 
-/** Register an animate listener to the animator.
- * Returns a function for unregistering event. */
+/** Bind an event handler to the animate event. */
 animator.add(timeDiff => { ... });
 
-/** Unregister an animate listener from the animator. */
+/** Unbind an event handler from the animate event. */
 animator.remove(timeDiff => { ... });
 
-/** Unregister all animate listeners from the animator. */
+/** Unbind all event handlers from the animate event. */
 animator.clear();
 
 /** Set a specific frame rate for the animation. */
@@ -30,21 +31,21 @@ animator.pause();
 /** Resume the animation loop. */
 animator.resume();
 
-/** Add listener to the pause event. */
+/** Bind an event handler to the pause event. */
 animator.onPause(() => { ... });
 
-/** Remove listener to the pause event. */
+/** Unbind an event handler from the pause event. */
 animator.removePause(() => { ... });
 
-/** Unregister all pause listeners from the animator. */
+/** Unbind all event handlers from the pause event. */
 animator.clearPause();
 
-/** Add listener to the resume event. */
+/** Bind an event handler to the resume event. */
 animator.onResume(() => { ... });
 
-/** Remove listener to the resume event. */
+/** Unbind an event handler from the resume event. */
 animator.removeResume(() => { ... });
 
-/** Unregister all resume listeners from the animator. */
+/** Unbind all event handlers from the resume event. */
 animator.clearResume();
 ```

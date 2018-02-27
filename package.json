@@ -3,7 +3,13 @@
   "version": "0.0.1",
   "description":
     "An instance class which manages animations by hooking into requestAnimationFrame (or setInterval if not available).",
-  "author": "jworkshop",
+  "author": "jworkshop <john.joydesign@gmail.com>",
+  "keywords": ["requestanimationframe", "animation"],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/JWorkshop/animator.git"
+  },
+  "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-preset-env": "^1.6.0",

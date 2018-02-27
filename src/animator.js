@@ -123,17 +123,14 @@ class Animator {
     }
   }
 
-  /** Perform action for pause event */
   _firePauseEvent() {
     this._fireEvents(this.pauseEvents);
   }
 
-  /** Perform action for resume event */
   _fireResumeEvent() {
     this._fireEvents(this.resumeEvents);
   }
 
-  /** Perform action for window hidden event. */
   _onWindowHidden() {
     this.isFoused = false;
 
@@ -142,7 +139,6 @@ class Animator {
     }
   }
 
-  /** Perform action for window show event. */
   _onWindowShow() {
     this.isFoused = true;
 
@@ -185,9 +181,7 @@ class Animator {
     }
   }
 
-  /** Execute all the rendering functions.
-   *  Note: quietMode is for window hide and show events only.
-   */
+  /** Execute all the rendering functions. */
   _render() {
     /* Update the two time-stamps with the new time-stamp of the animation. */
     this.previousAnimateTime = this.newAnimateTime;
@@ -214,25 +208,17 @@ class Animator {
     }
   }
 
-  /** Register an animate listener to the animator.
-   * Returns a function for unregistering event. */
+  /** Bind an event handler to the animate event. */
   add(animateListener) {
-    if (typeof animateListener === "function") {
-      this.animateListeners.push(animateListener);
-      return () => this.remove(animateListener);
-    }
+    return this._addEvent(animateListener, this.animateListeners);
   }
 
-  /** Unregister an animate listener from the animator. */
+  /** Unbind an event handler from the animate event. */
   remove(animateListener) {
-    let index = this.animateListeners.indexOf(animateListener);
-
-    if (index !== -1) {
-      this.animateListeners.splice(index, 1);
-    }
+    this._removeEvent(animateListener, this.animateListeners);
   }
 
-  /** Unregister all animate listeners from the animator. */
+  /** Unbind all event handlers from the animate event. */
   clear() {
     this.animateListeners = [];
   }
@@ -295,39 +281,32 @@ class Animator {
     }
   }
 
-  /** Add listener to the pause event. */
+  /** Bind an event handler to the pause event. */
   onPause(pauseEvent) {
     return this._addEvent(pauseEvent, this.pauseEvents);
   }
 
-  /** Remove listener to the pause event. */
+  /** Unbind an event handler from the pause event. */
   removePause(pauseEvent) {
     this._removeEvent(pauseEvent, this.pauseEvents);
   }
 
-  /** Unregister all pause listeners from the animator. */
+  /** Unbind all event handlers from the pause event. */
   clearPause() {
     this.pauseEvents = [];
   }
 
-  /** Add listener to the resume event. */
+  /** Bind an event handler to the resume event. */
   onResume(resumeEvent) {
-    if (typeof resumeEvent === "function") {
-      this.resumeEvents.push(resumeEvent);
-      return () => this.removeResume(resumeEvent);
-    }
+    return this._addEvent(resumeEvent, this.resumeEvents);
   }
 
-  /** Remove listener to the resume event. */
+  /** Unbind an event handler from the resume event. */
   removeResume(resumeEvent) {
-    let index = this.resumeEvents.indexOf(resumeEvent);
-
-    if (index !== -1) {
-      this.resumeEvents.splice(index, 1);
-    }
+    this._removeEvent(resumeEvent, this.resumeEvents);
   }
 
-  /** Unregister all resume listeners from the animator. */
+  /** Unbind an event handler from the resume event. */
   clearResume() {
     this.resumeEvents = [];
   }
