@@ -2,6 +2,10 @@
 
 An instance class which manages animations by hooking into requestAnimationFrame (or setInterval if not available).
 
+[![build status][https://img.shields.io/travis/jworkshop/animator.svg]][https://travis-ci.org/jworkshop/animator]
+
+## install
+
 [![NPM](https://nodei.co/npm/@jworkshop/animator.png)](https://nodei.co/npm/@jworkshop/animator/)
 
 ## Usage
