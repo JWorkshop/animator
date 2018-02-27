@@ -2,7 +2,19 @@
 
 An instance class which manages animations by hooking into requestAnimationFrame (or setInterval if not available).
 
-[![build status][https://img.shields.io/travis/jworkshop/animator.svg]][https://travis-ci.org/jworkshop/animator]
+[![NPM version][npm-image]][npm-url]
+[![build status][travis-image]][travis-url]
+[![node version][node-image]][node-url]
+[![npm download][download-image]][download-url]
+
+[npm-image]: http://img.shields.io/npm/v/@jworkshop/animator.svg
+[npm-url]: http://npmjs.org/package/@jworkshop/animator
+[travis-image]: https://img.shields.io/travis/jworkshop/animator.svg
+[travis-url]: https://travis-ci.org/jworkshop/animator
+[node-image]: https://img.shields.io/badge/node.js-%3E=_0.10-green.svg
+[node-url]: http://nodejs.org/download/
+[download-image]: https://img.shields.io/npm/dm/@jworkshop/animator.svg
+[download-url]: https://npmjs.org/package/@jworkshop/animator
 
 ## install
 
