@@ -1,6 +1,6 @@
 {
   "name": "@jworkshop/animator",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description":
     "An instance class which manages animations by hooking into requestAnimationFrame (or setInterval if not available).",
   "author": "jworkshop <john.joydesign@gmail.com>",
