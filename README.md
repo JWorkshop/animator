@@ -18,7 +18,7 @@ An instance class which manages animations by hooking into requestAnimationFrame
 
 ## install
 
-[![NPM](https://nodei.co/npm/@jworkshop/animator.png)](https://nodei.co/npm/@jworkshop/animator/)
+[![NPM](https://nodei.co/npm/@jworkshop/animator.png)](https://nodei.co/npm/@jworkshop/animator)
 
 ## Usage
 

@@ -1,1 +1,1 @@
-module.exports = require("./lib/animator").default;
+module.exports = require("./lib/index").default;

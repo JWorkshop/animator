@@ -1,6 +1,6 @@
 {
   "name": "@jworkshop/animator",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description":
     "An instance class which manages animations by hooking into requestAnimationFrame (or setInterval if not available).",
   "author": "jworkshop <john.joydesign@gmail.com>",
@@ -15,7 +15,7 @@
     "babel-preset-env": "^1.6.0",
     "eslint": "^4.7.2"
   },
-  "main": "./lib/animator.js",
+  "main": "./lib/index.js",
   "scripts": {
     "build": "babel src -d lib --copy-files"
   },
